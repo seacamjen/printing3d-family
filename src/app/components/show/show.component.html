@@ -1,0 +1,34 @@
+<p-skeleton *ngIf="isLoading"></p-skeleton>
+<p-carousel *ngIf="!isLoading" [value]="displayDetails" styleClass="custom-carousel" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <h5>Season 1</h5>
+    </ng-template>
+    <ng-template let-displayDetail pTemplate="item">
+            <div class="product-item-content">
+                <div class="p-mb-3">
+                    <img src="https://i.ytimg.com/vi/{{displayDetail.id}}/0.jpg" class="product-image" />
+                </div>
+                <div style="height: 50px;">
+                    <h4 class="p-mb-1">{{displayDetail.title}}</h4>
+                    <!-- <h6 class="p-mt-0 p-mb-3">${{displayDetail.description}}</h6> -->
+                </div>
+                <div class="car-buttons p-mt-5">
+                    <p-button 
+                        (click)="watchVideo(displayDetail.id)" 
+                        pTooltip="Watch Video" 
+                        tooltipPosition="top" 
+                        type="button" 
+                        styleClass="p-button-danger p-button-rounded p-mr-2" 
+                        icon="pi pi-youtube">
+                    </p-button>
+                    <!-- <p-button 
+                        pTooltip="View More Details" 
+                        tooltipPosition="top"
+                        type="button" 
+                        styleClass="p-button-warning p-button-rounded p-mr-2" 
+                        icon="pi pi-info-circle">
+                    </p-button> -->
+                </div>
+            </div>
+    </ng-template>
+</p-carousel>
