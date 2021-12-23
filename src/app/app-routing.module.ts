@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShowComponent } from "./components/show/show.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: '/show', pathMatch:'full' },
   { path: 'show', component: ShowComponent }
 ];
 
