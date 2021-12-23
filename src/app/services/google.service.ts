@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { DisplayDetails, VideoIds, VideoInfo } from 'src/app/interfaces/google';
 import { map, mergeMap } from "rxjs/operators";
-import { environment } from "../../environments/environment";
+import { YouTubeInfo } from "../../assets/secrets";
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoogleService {
-  YouTubeConfig = environment.YouTubeInfo
+  YouTubeConfig = YouTubeInfo
   Result_Count = 20 //max 50
   videoIds: string[] = []
   videoObject: VideoIds | undefined
