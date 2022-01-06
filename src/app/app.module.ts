@@ -1,23 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ButtonModule } from "primeng/button";
 import { RippleModule } from "primeng/ripple";
+import { CarouselModule } from "primeng/carousel";
+import { SkeletonModule } from "primeng/skeleton";
+import { TooltipModule } from "primeng/tooltip";
+import { CardModule } from "primeng/card";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShowComponent } from './components/show/show.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    CarouselModule,
+    SkeletonModule,
+    TooltipModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

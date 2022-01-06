@@ -50,3 +50,6 @@ Thumbs.db
 
 # github
 /.gitub
+
+#secrets
+/src/assets/secrets.ts
