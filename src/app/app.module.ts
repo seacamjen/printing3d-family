@@ -8,6 +8,7 @@ import { RippleModule } from "primeng/ripple";
 import { CarouselModule } from "primeng/carousel";
 import { SkeletonModule } from "primeng/skeleton";
 import { TooltipModule } from "primeng/tooltip";
+import { CardModule } from "primeng/card";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { ShowComponent } from './components/show/show.component';
     RippleModule,
     CarouselModule,
     SkeletonModule,
-    TooltipModule
+    TooltipModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
